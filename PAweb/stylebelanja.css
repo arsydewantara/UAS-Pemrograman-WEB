@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 88px;
+    background-color: #8EB5BA;
+}
+
+main, .main-konten{
+    height: 120vh;
+    width: 100%;
+    background-color: #BFF3FA;
+    background-position:right center;
+    background-size: cover;
+    position:relative;
+    background-attachment: fixed;
+}
+
+.Logo {
+    cursor: pointer;
+}
+
+#darkmode_id {
+    cursor: pointer;
+}
+
+li, a {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    padding: 7px 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navi {
+    list-style: none;
+}
+
+#naviList {
+    background-color: none;
+}
+
+.navi ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+#listNav a{
+    color: #12151f;
+}
+
+.navi ul li .darkmode {
+    display: none;
+}
+
+.navi ul li a {
+    transition: all 0.3s ease 0;
+    text-decoration: none;
+}
+
+.navi ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.head-table{
+    font-family: "Rubik", sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px 20px 20px;
+    background-color: transparent;
+    font-size: 30px;
+    color: #26223B;
+
+}
+
+#bars, #close{
+    display: none;
+}
+
+/* button{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+} */
+
+.add-search{
+    margin: auto;
+    display: flex;
+    /* padding: 7px 1%; */
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.add-search ul li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.searchbtn {
+    background-color: #00ceab;
+}
+
+.addbutton a:link {
+    color: black;
+}
+
+#tmbhbtn {
+    position: relative;
+    /* top: 10px; */
+    background-color: #8EB5BA;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin-left: 10px;
+    /* margin-bottom: 10px;  */
+    border: none;
+    cursor: pointer;
+}
+
+#tmbhbtn a{
+    color: #12151f;
+}
+
+.form-control {
+    height: 25px;
+    padding-left: 2px;
+}
+
+.form-control ::placeholder{
+    color: grey;
+}
+
+.searchbtn{
+    display: flex;
+    background-color: grey;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 5px 5px;
+    justify-content: flex-end;
+}
+
+.searchbtn i {
+    color: black;
+
+}
+
+.searchbar{
+
+    display: flex;
+    justify-content: flex-end;
+    background-color: #BFF3FA;
+}
+
+.searchbar ::placeholder{
+    color: rgb(128, 128, 128);
+}
+
+
+#cart{
+    cursor: pointer;
+}
+
+.table {
+    height: 600px;
+    overflow: auto;
+    margin: 10px;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+table th {
+    position: sticky;
+    top: 0;
+    background-color: #2D393B;
+    color: white;
+    font-size: 15px;
+}
+
+th, td{
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+
+}
+tr{
+    background-color: white;
+}
+
+tr:hover td{
+    color: black;
+    background-color: #ABDAE0;
+}
+
+button:hover{
+    background-color: #83CED5;
+}
+
+::placeholder{
+    color: #00ceab;
+}
+
+a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+}
+
+
+.edit, .del {
+    cursor: pointer;
+}
+
+/* .edit, .del a:link{
+
+} */
+
+.mode{
+    position: relative;
+    bottom: 70px;
+}
+
+.mode input[type="checkbox"]{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color:#3664ff ;
+    outline: none;
+    border-radius: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+    float: right;
+}
+
+.mode input[type="checkbox"]:checked{
+    background-color: #12151f;
+}
+
+.mode input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: .5s ease;
+}
+
+.mode input[type="checkbox"]:checked::before{
+    transform: translateX(20px);
+}
+
+footer {
+    padding: 40px 0px;
+    /* margin-top: 30px; */
+    background-color: #8EB5BA;
+    font: Rubik, sans-serif;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+}
+
+footer ul {
+    list-style: none;
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+}
+
+footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a:hover {
+    color: gray;
+}
+
+footer .hakcipta {
+    position: relative;
+    left: 15px;
+    margin-top:  15px;
+    text-align: center;
+    font-size: 13px;
+    color: navy;
+}
+
+#gmbrhp{
+    width: 100px;
+}
+
+@media screen and (max-width: 721px){
+
+
+
+    .navi ul li{
+        display: block;
+        padding-top: 15px;
+    }
+
+    .navi #close {
+        display: block;
+        max-height: 20px;
+        margin: 10px 10px 10px 100px;
+        cursor: pointer;
+
+    }
+    .navi ul{
+        padding: 30px;
+    }
+    .main-konten{
+        display: block;
+        /* max-height: 20px; */
+        padding: 50px 0px;
+        /* align-items: center; */
+        flex-direction: column-reverse;
+    }
+    .navi{
+        position: absolute;
+        background:#D0ECF0 ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        text-align: left;
+        display: none;
+    }
+
+    .konten2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #phoneimg{
+        margin-top: 25px;
+        max-height: 250px;
+    }
+
+    .konten1 {
+        flex-basis: 100%;
+    }
+
+    .konten1 h1{
+        font-size: 45px;
+    }
+
+    .konten1 p{
+        font-size: 16px;
+    }
+
+    #bars {
+        display: block;
+        color: black;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    #close {
+        font-size: 25px;
+    }
+
+    #gmbrhp{
+        width: 70px;
+    }
+
+}

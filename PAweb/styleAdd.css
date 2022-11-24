@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Nunito", sans-serif;
+    color: #26223B;
+    background-color : #BFF3FA;
+    background-position:right center;
+    background-size: cover;
+    position:relative;
+    margin: 0px;
+    background-attachment: fixed;
+    line-height: 1.5;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.form{
+    border-radius: 40px;
+    background: #8EB5BA;
+    width: 400px;
+    padding: 2rem;
+}
+
+.submit {
+    border-radius: 10px;
+    background: #1d04ff;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #fdfdfd;
+    color: #000000;
+}
+
+#upload{
+    position: relative;
+    left: 10px;
+}

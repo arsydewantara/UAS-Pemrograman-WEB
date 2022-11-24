@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rubik&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 88px;
+    background-color: #8EB5BA;
+}
+
+main, .main-konten, .content-add{
+    height: 80vh;
+    width: 100%;
+    background-color: #BFF3FA;
+    background-position:right center;
+    background-size: cover;
+    position:relative;
+    background-attachment: fixed;
+}
+
+.Logo {
+    cursor: pointer;
+    max-height: 73px;
+}
+
+li, a {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+nav {
+    margin: auto;
+    display: flex;
+    padding: 7px 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navi {
+    list-style: none;
+}
+
+#naviList {
+    background-color: none;
+}
+
+.navi ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navi ul li a{
+    color: #12151f;
+}
+
+.navi ul li .darkmode {
+    display: none;
+}
+
+.mode{
+    position: relative;
+    bottom: 35px;
+}
+
+.mode input[type="checkbox"]{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    appearance: none;
+    background-color:#3664ff ;
+    outline: none;
+    border-radius: 10px;
+    transition: .5s ease;
+    cursor: pointer;
+    float: right;
+}
+
+.mode input[type="checkbox"]:checked{
+    background-color: #12151f;
+}
+
+.mode input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: .5s ease;
+}
+
+.mode input[type="checkbox"]:checked::before{
+    transform: translateX(20px);
+}
+
+.navi ul li a {
+    transition: all 0.3s ease 0;
+    text-decoration: none;
+}
+
+
+.navi ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.thanks {
+    width: 100%;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.main-konten {
+    display: flex;
+    /* position: absolute; */
+    /* align-items: center; */
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.content-add{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0px;
+}
+
+#phoneimg {
+    max-height: 450px;
+    margin-right: 50px;
+}
+
+#astelimg{
+    max-height: 450px;
+}
+
+.konten1 {
+    font-family: 'Rubik', sans-serif;
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+
+#bars, #close{
+    display: none;
+}
+
+.info{
+    position: relative;
+    left: 10px;
+    top: 200px;
+}
+
+.contactperson{
+    position: relative;
+    top: 100px;
+}
+
+.deskripsi{
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    bottom: 100px;
+    left: 10px;
+}
+
+.order :hover{
+    background-color: #000000;
+    color: #fcfcfc;
+}
+
+.cart :hover{
+    background-color: #000000;
+    color: #fcfcfc;
+}
+
+.add-vt {
+    font-family: 'Rubik', sans-serif;
+    flex-basis: 40%;
+    position: relative;
+}
+
+.konten1 h1 {
+    font-size: 50px;
+}
+
+.add-vt h1 {
+    font-size: 50px;
+}
+
+.konten1 p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.add-vt p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+button {
+    color: black;
+    padding: 5px 15px;
+    margin: 10px 0px 0px 0px;
+    background-color: transparent;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0;
+    font-family: "Dosis";
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.img2{
+    flex-basis: 30%;
+    position: relative;
+    padding-left: 80px;
+}
+
+.img2 img{
+    max-height: 400px;
+    min-height: 10px;
+}
+
+.konten2 {
+    flex-basis: 30%;
+    position: relative;
+}
+
+.konten2 img {
+    max-height: 400px;
+    min-height: 10px;
+}
+
+footer {
+    padding: 30px 0px;
+    background-color: #8EB5BA;
+    font: Rubik, sans-serif;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+}
+
+footer ul {
+    list-style: none;
+    font-size: 25px;
+    line-height: 1;
+    text-align: center;
+}
+
+footer ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+footer ul li a:hover {
+    color: gray;
+}
+
+footer .hakcipta {
+    margin-top:  15px;
+    text-align: center;
+    font-size: 13px;
+    color: navy;
+}
+
+@media screen and (max-width: 721px){
+
+
+
+    .navi ul li{
+        display: block;
+        padding-top: 15px;
+    }
+
+    .navi #close {
+        display: block;
+        max-height: 20px;
+        margin: 10px 10px 10px 100px;
+        cursor: pointer;
+
+    }
+    .navi ul{
+        padding: 30px;
+    }
+    .main-konten{
+        display: block;
+        /* max-height: 20px; */
+        padding: 50px 0px;
+        /* align-items: center; */
+        flex-direction: column-reverse;
+    }
+    .navi{
+        position: absolute;
+        background:#D0ECF0 ;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        text-align: left;
+        display: none;
+    }
+
+    .konten2{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    #phoneimg{
+        margin-top: 25px;
+        max-height: 250px;
+    }
+
+    .konten1 {
+        flex-basis: 100%;
+    }
+
+    .konten1 h1{
+        font-size: 45px;
+    }
+
+    .konten1 p{
+        font-size: 16px;
+    }
+
+    #bars {
+        display: block;
+        color: black;
+        font-size: 30px;
+        margin-right: 5px;
+    }
+
+    #close {
+        font-size: 25px;
+    }
+
+}
