@@ -1,6 +1,28 @@
 <?php
     require 'config.php';
-    $result = mysqli_query($db, "SELECT * FROM barang");
+    
+
+    $perpage = 5; //konten per halaman
+    $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+    // die("test...".$page);
+    if(empty($page)){
+        $mulai = 0;
+        $page = 1;
+    }else{
+        $mulai = ($page-1) * $perpage;
+    }
+
+    $hal = "SELECT * FROM barang LIMIT $mulai, $perpage";
+
+    $result = mysqli_query($db, "SELECT * FROM barang LIMIT $mulai, $perpage");
+
+    $result2 = mysqli_query($db, "SELECT * FROM barang");
+
+    $total = mysqli_num_rows($result2);
+    
+    $pages = ceil($total/$perpage);
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -36,8 +58,11 @@
         <div class="head-table" id="tabletext">
             <h3>DAFTAR GADGET YANG TERSEDIA</h3>
         </div>
+        <?php
+        
+        ?>
         <div class="table" style="overflow-x:auto;">
-            <table class="table table-dark">
+            <table class="table table-dark" id="dtPg">
                 <thead>
                     <tr>
                         <th>NO</th>
@@ -51,7 +76,7 @@
                     </tr>
                 </thead>
                 <?php
-                    $i = 1;
+                    $i = 1 +$mulai;
                     while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                 <tbody>
@@ -62,7 +87,7 @@
                         <td><?=$row['warna']?></td>
                         <td><?=$row['harga']?></td>
                         <td><?=$row['rilis']?></td>
-                        <td><img src="model/<?=$row['gambarhp']?>" alt="" width="100px"></td>
+                        <td><img src="model/<?=$row['gambarhp']?>" alt="" width="70px"></td>
                         <td><a href="thanks.php?id=<?=$row['id']?>" ><i class="fa fa-shopping-cart" style="font-size:36px" id="cart" name='buy'></i></a></td>
                     </tr>
                 </tbody>
@@ -71,7 +96,26 @@
                     }
                     ?>
             </table>
+            
         </div>
+
+        <div class="pagin">
+            
+        </div>
+        
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <?php for($o=1; $o<=$pages; $o++)
+                    if($o != $page){
+                        echo "<li class='page-item'><a class='page-link' href='belanja.php?halaman=$o'>$o</a></li>";
+                    }else {
+                        echo "<li class='page-item'><a class='page-link'> $o</a></li>";
+                    } 
+                
+                
+                ?>
+            </ul>
+        </nav>
     </main>
 
     <footer>

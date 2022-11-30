@@ -180,10 +180,14 @@ nav {
     cursor: pointer;
 }
 
+.pagin{
+    font-size: 15;
+}
+
 .table {
     height: 600px;
     overflow: auto;
-    margin: 10px;
+    margin: 2px;
 }
 
 table {
